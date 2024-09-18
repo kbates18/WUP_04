@@ -73,6 +73,16 @@ summary.aov(model1)
 
 The p-value is 0.000236, meaning that there is a statistical difference within these results. Further testing is required to see the results.
 
+```{r}
+#we specify the margins starting at the bottom and proceeding clockwise - thus 8.7 is the left side margin to hold the names of the factors
+par(mar = c(3, 17, 2, 2))
+plot(TukeyHSD(model1, conf.level = 0.98), las=2)
+```
+
+The difference within this graph is clearly there, as the LT high school-graduate and the high school graduates are below 0 showing that there is a significant difference when it is compared to the other degree's.
+
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+A relationship was found within this data, we visually saw a difference with the GRADUATE's being significantly higher than the high school DEGREE and the LT high school DEGREE. To fully see this we saw the numbers showing that there was a difference as the Q1 of the graduate was 10 while the Q3 of LT high school is 8.25 and the Q3 of HIGH SCHOOL is 9. This was proven with the one way anova showing a p-value of 0.000236 proving something was happening. After playing around with the code we were able to see a significant difference between two levels within this data, those levels being the high school and LThigh school as they are below 0.
