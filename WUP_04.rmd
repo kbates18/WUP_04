@@ -1,7 +1,7 @@
 ---
 title: "WUP_04"
 author: "Kacey Bates"
-date: "September17, 2024"
+date: "September 17, 2024"
 output:
   html_document:
     df_print: paged
@@ -36,6 +36,18 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+```{r}
+basicCN <- ggplot(GSScsv,aes(x=DEGREE,y=WORDSUM))
+```
+```{r}
+basicCN + geom_boxplot()
+```
+Based on the box plot, you can see that there is a difference shown, graduates have a higher Q1 than high schools Q3.Junior colleges Q1 is also just under LT high schools Q3.
+
+
+```{r}
+boxplot(WORDSUM~DEGREE,data=GSScsv)
+```
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
