@@ -42,6 +42,8 @@ basicCN <- ggplot(GSScsv,aes(x=DEGREE,y=WORDSUM))
 ```{r}
 basicCN + geom_boxplot()
 ```
+
+
 Based on the box plot, you can see that there is a difference shown, graduates have a higher Q1 than high schools Q3.Junior colleges Q1 is also just under LT high schools Q3.
 
 
